@@ -5,9 +5,9 @@ import './App.css';
 export default function App() {
   return (
     <div className="App">
-      <h1>Samar Weather App</h1>
+      <h1 className="hearder-title">Samar Weather App</h1>
       <Weather />
-      <footer>
+      <footer className="mt-2">
         This app is coded by{" "}
         <a
           href="http://samiraaghajani.ir/"

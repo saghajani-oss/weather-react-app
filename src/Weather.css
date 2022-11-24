@@ -1,11 +1,10 @@
-.weather ul {
+.weather ul, h1 {
     margin: 0;
     padding: 0;
 }
 
 .weather {
     border: 2px solid #a7bcb9;
-    max-width: 1000px;
     margin: 0 auto;
     border-radius: 5px;
     text-align: left;
@@ -14,6 +13,7 @@
 .weather form {
     margin: 20px 0;
 }
+
 
 .weather li {
     list-style: none;
@@ -41,5 +41,14 @@
 
 
 .weather-degree {
-    font-size: 30px;
+    font-size: 56px;
+    position: relative;
+    top: 20px;
+    margin-left: 10px;
+}
+
+.weather-unit {
+    position: relative;
+    top: -5px;
+    margin: 5px;
 }

@@ -1,7 +1,16 @@
 .App {
   text-align: center;
+  max-width: 1000px;
+  margin: 50px auto;
 }
 
-.App h1 {
-  margin: 20px 0;
+.hearder-title {
+  margin: 40px 0;
+  font-weight: bold;
+  color: #fd5959;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fd5959;
 }

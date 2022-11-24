@@ -12,11 +12,16 @@ export default function Weather() {
                 <input
                   type="search"
                   placeholder="Enter a city ..."
+                  autoFocus="on"
                   className="search-text w-100"
                 />
               </div>
               <div className="col-3">
-                <input type="submit" value="Search" className="search-button w-100" />
+                <input
+                  type="submit"
+                  value="Search"
+                  className="search-button w-100"
+                />
               </div>
             </div>
           </form>
@@ -26,15 +31,16 @@ export default function Weather() {
             <li>Clear</li>
           </ul>
           <div className="row mt-4">
-            <div className="col-6">
+            <div className="col-6 mb-4">
               <img
                 src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                alt="clear" className="weather-img"
+                alt="clear"
               />
-              <strong className="weather-degree">6 °C</strong>
+              <strong className="weather-degree">6</strong>
+              <span className="weather-unit">°C</span>
             </div>
-            <div className="col-6">
-              <ul>
+            <div className="col-6 mb-4">
+              <ul className="mt-3">
                 <li>Precipitation: 2%</li>
                 <li>Humidity: 53%</li>
                 <li>Wind: 10 km/h</li>
