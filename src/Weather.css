@@ -1,0 +1,45 @@
+.weather ul {
+    margin: 0;
+    padding: 0;
+}
+
+.weather {
+    border: 2px solid #a7bcb9;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.weather form {
+    margin: 20px 0;
+}
+
+.weather li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.search-text {
+    border: 2px solid #24527a;
+    background-color: #f3f3f3;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+
+.search-button {
+    border: 2px solid #24527a;
+    background-color: #24527a;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 5px;
+    color: white;   
+}
+
+
+
+.weather-degree {
+    font-size: 30px;
+}

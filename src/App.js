@@ -1,3 +1,4 @@
+import Weather from "./Weather";
 
 import './App.css';
 
@@ -5,6 +6,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>Samar Weather App</h1>
+      <Weather />
       <footer>
         This app is coded by{" "}
         <a
