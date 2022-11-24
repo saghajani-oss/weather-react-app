@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="App">
       <h1 className="hearder-title">Samar Weather App</h1>
-      <Weather />
+      <Weather defauldCity="new York"/>
       <footer className="mt-2">
         This app is coded by{" "}
         <a

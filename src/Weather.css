@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+.weather h1 {
+    font-weight: bold;
+}
+
 .weather {
     border: 2px solid #a7bcb9;
     margin: 0 auto;
@@ -50,5 +54,5 @@
 .weather-unit {
     position: relative;
     top: -5px;
-    margin: 5px;
+    margin: 0px;
 }
