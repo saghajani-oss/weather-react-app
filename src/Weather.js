@@ -1,22 +1,23 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 
 import "./Weather.css";
 
 export default function Weather(props) {
   let [ready, setReady] = useState(false);
-  let [weatherDate, setWeatherDate] = useState({});
+  let [weatherData, setWeatherData] = useState({});
 
   function weatherDetails(response) {
-    
+
     console.log(response);
     
-    setWeatherDate({
+    setWeatherData({
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
-      date: "Wednesday 07:00",
+      date: new Date(response.data.dt*1000),
       icon: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
     });
 
@@ -49,22 +50,24 @@ export default function Weather(props) {
            </form>
            <h1 className="text-capitalize">{props.defauldCity}</h1>
            <ul>
-             <li>{weatherDate.date}</li>
-             <li className="text-capitalize">{weatherDate.description}</li>
+             <li>
+               <FormattedDate date={weatherData.date}/>
+             </li>
+             <li className="text-capitalize">{weatherData.description}</li>
            </ul>
            <div className="row mt-4">
              <div className="col-6 mb-4">
-               <img src={weatherDate.icon} alt="clear" />
+               <img src={weatherData.icon} alt="clear" />
                <strong className="weather-degree">
-                 {Math.round(weatherDate.temperature)}
+                 {Math.round(weatherData.temperature)}
                </strong>
                <span className="weather-unit">°C</span>
              </div>
              <div className="col-6 mb-4">
                <ul className="mt-3">
                  <li>Precipitation: 2%</li>
-                 <li>Humidity: {weatherDate.humidity}%</li>
-                 <li>Wind: {Math.round(weatherDate.wind)} km/h</li>
+                 <li>Humidity: {weatherData.humidity}%</li>
+                 <li>Wind: {Math.round(weatherData.wind)} km/h</li>
                </ul>
              </div>
            </div>
