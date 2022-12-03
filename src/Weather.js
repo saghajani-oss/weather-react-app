@@ -14,14 +14,14 @@ export default function Weather(props) {
     console.log(response);
     
     setWeatherData({
-      ready:true,
+      ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
-      date: new Date(response.data.dt*1000),
-      icon: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-      city: response.data.name
+      date: new Date(response.data.dt * 1000),
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      city: response.data.name,
     });
   }
 
