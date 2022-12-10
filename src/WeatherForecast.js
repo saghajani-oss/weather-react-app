@@ -20,18 +20,24 @@ export default function WeatherForecast(props) {
      return (
        <div className="WeatherForecast">
          <div className="row">
-           <div className="col">
-           <WeatherForecastDaily data={forecast[0]} />
-           </div>
+           {forecast.map(function(dailyForecast,index) {
+            if (index < 5) {
+              return (
+                <div className="col" key={index}>
+                  <WeatherForecastDaily data={dailyForecast} />
+                </div>
+              );
+            }
+           })}
          </div>
        </div>
      );
    }
    else {
-    let latitude = props.coordinates.lat;
-    let longitude = props.coordinates.lon;
-    let apiKey = "e947cb2640f1db92e6a19005bc43b435";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+     let apiKey = "73a00877081bd43422bdee0f3022beb5";
+     let latitude = props.coordinates.lat;
+     let longitude = props.coordinates.lon;
+     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
    }
 }
