@@ -12,3 +12,11 @@
 .WeatherForecastTemp-min {
     opacity: 0.7;
 }
+
+.Forecast-Day {
+    border: 1px solid #24527A;
+    margin: 0 5px;
+    padding: 5px 0;
+    border-radius: 10px;
+    box-shadow: 4px 4px 2px 0px #24527A;
+}
